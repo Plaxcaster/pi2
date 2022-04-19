@@ -1,3 +1,6 @@
-from django.shortcuts import render
+# editando o arquivo experiencein/perfis/views.py
+# experiencein/perfis/views.py 
+from django.shortcuts import render 
 
-# Create your views here.
+def index(request): 
+    return render(request, 'index.html')
