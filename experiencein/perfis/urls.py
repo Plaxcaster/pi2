@@ -1,8 +1,8 @@
-# arquivo experiencein/experiencein/urls.py
-from django.urls import include, path
-from django.contrib import admin
-
+# experiencein/perfis/urls.py
+from django.urls import path
+from perfis import views
 urlpatterns = [
-    path('admin/',admin.site.urls), 
-    path('', include('perfis.urls'))
+	path('', views.index, name='index'),
+	path('perfis/<int:perfil_id>', views.exibir, name='exibir'),
+	path('perfis/<int:perfil_id>/convidar', views.convidar, name='convidar')
 ]
